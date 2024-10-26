@@ -1,0 +1,3 @@
+[submodule "IDTxl"]
+	path = IDTxl
+	url = https://github.com/pwollstadt/IDTxl
