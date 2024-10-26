@@ -8,7 +8,8 @@
 
 % ready for submission
 \usepackage[preprint]{neurips_2023}
-
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{bosch.bib} %Import the bibliography file
 
 % to compile a preprint version, e.g., for submission to arXiv, add add the
 % [preprint] option:
@@ -53,11 +54,12 @@
 	Lugano, Switzerland \\
 	\\
 	% examples of more authors
-	% \And
-	% Coauthor \\
-	% Affiliation \\
-	% Address \\
-	% \texttt{email} \\
+	\And
+	Marco Gabriel \\
+	Faculty of Informatics \\
+	Università della Svizzera Italiana\\
+	Lugano, Switzerland \\
+	% \\
 	% \AND
 	% Coauthor \\
 	% Affiliation \\
@@ -87,7 +89,7 @@
 	\end{abstract}
 	
 	
-	\section{Objective}
+	\section{Objective} % The problem being addressed and its significance.
 	
 	We've been tackling a problem, where we were given several datasets with different latent context, for those we needed to provide the directed acyclic graph, which could be interpreted casually. Namely the datasets were structured as a set of columns, which were grouped in a several blocks, with an assumption of locality between elements of a block. We needed to discover various causal related structures about the given data:
 	
@@ -96,6 +98,64 @@
 		\item The root causes of the observed change
 		\item Visualisation of the graph, the root causes and their influence
 	\end{enumerate}
+
+
+    \section{Approach} % Methodology, algorithms, and frameworks used.
+
+    \subsection{Methodology}
+
+    The process is divided into three stages. First, we do not have access to any ground-truth. In the second stage, we get access to the first 15 rows of the target adjacency-matrix. In the last stage, we get additional access to the lower diagonal adjacency-matrix. We use this ground-truth as prior knowledge in the following algorithms as well as to evaluate our results.
+
+    In every stage, we fit various algorithms to the given data and compared their results. We outline these algorithms in the following sections.
+
+    \subsection{Algorithms}
+    
+    
+
+    \subsubsection{LiNGAM}
+    LiNGAM estimates structural equation models or linear causal Bayesian networks, assuming the data is non-Gaussian.
+    First, to apply DirectLiNGAM\cite{lingam}, we merge the datasets while introducing a new feature to differentiate the origins. 
+    Secondly, we use MultiGroupDirectLiNGAM: \cite{multilingam} on the separate datasets.
+     
+    Independent component analysis (ICA-LiNGAM)
+
+    \subsubsection{causallearn.search.ConstraintBased.FCI | fci}
+
+    \subsubsection{VARMALINGRAM}
+
+    \subsubsection{PC}
+    
+    \subsubsection{Structural Agnostic Model (SAM)}
+    We use the SAM implementation of the CausalDiscoveryToolbox (CDT). SAM implements an adversarial game in which a separate model generates each variable, given real values from all others. A discriminator attempts to distinguish between real and generated samples. Finally, a sparsity penalty forces each generator to consider only a small subset of the variables, yielding a sparse causal graph.
+    Lastly, the commonly made “causal sufficiency” condition (that there exist no hidden common cause to any pair of observed variables) can also be alleviated.
+    each conditional generator (an artificial neural network) “plays” to produce one of the variables Xi given real observations of a (small) subset of all the others, hypothesized to be its direct causes, and noise.
+    It is orders of magnitudes slower than Lingam, but also a lot better \cite{SAM}.
+
+    \subsubsection{LLM: o1-preview from OpenAI}
+    We prompt the o1-preview LLM from OpenAI to respond with the TODO
+    
+    \subsection{Frameworks}
+    \subsubsection{DoWhy}
+    https://github.com/py-why/dowhy
+    \cite{DoWhy} \cite{sharma2020dowhyendtoendlibrarycausal}
+    
+    \subsubsection{CausalDiscoveryToolbox}
+    https://github.com/FenTechSolutions/CausalDiscoveryToolbox 
+    \cite{CDT}
+    
+    \subsubsection{gCastle}
+    https://github.com/huawei-noah/trustworthyAI/tree/master/gcastle
+    \cite{zhang2021gcastlepythontoolboxcausal}
+    
+    \section{Results} % Key findings, metrics, or visualizations.
+
+    \subsection{Causal Graph}
+    \subsection{Root Cause}
+    \subsection{Visualisation}
+    
+    
+    \section{Challenges} % Difficulties encountered and solutions.
+    The most challenging issue throughout the process was to evaluate possible solutions without knowing the ground truth.
  
 	\begin{center}
 		\url{http://www.neurips.cc/}
@@ -176,16 +236,6 @@
 	\subsection{Tables}
 	
 	
-	All tables must be centered, neat, clean and legible.  The table number and
-	title always appear before the table.  See Table~\ref{sample-table}.
-	
-	
-	Place one line space before the table title, one line space after the
-	table title, and one line space after the table. The table title must
-	be lower case (except for first word and proper nouns); tables are
-	numbered consecutively.
-	
-	
 	Note that publication-quality tables \emph{do not contain vertical rules.} We
 	strongly suggest the use of the \verb+booktabs+ package, which allows for
 	typesetting high-quality, professional tables:
@@ -213,34 +263,9 @@
 	\end{table}
 	
 	
-	If your file contains type 3 fonts or non embedded TrueType fonts, we will ask
-	you to fix it.
 	
 	
-	\subsection{Margins in \LaTeX{}}
-	
-	
-	
-	{
-		\small
-		
-		
-		[1] Alexander, J.A.\ \& Mozer, M.C.\ (1995) Template-based algorithms for
-		connectionist rule extraction. In G.\ Tesauro, D.S.\ Touretzky and T.K.\ Leen
-		(eds.), {\it Advances in Neural Information Processing Systems 7},
-		pp.\ 609--616. Cambridge, MA: MIT Press.
-		
-		
-		[2] Bower, J.M.\ \& Beeman, D.\ (1995) {\it The Book of GENESIS: Exploring
-			Realistic Neural Models with the GEneral NEural SImulation System.}  New York:
-		TELOS/Springer--Verlag.
-		
-		
-		[3] Hasselmo, M.E., Schnell, E.\ \& Barkai, E.\ (1995) Dynamics of learning and
-		recall at excitatory recurrent synapses and cholinergic modulation in rat
-		hippocampal region CA3. {\it Journal of Neuroscience} {\bf 15}(7):5249-5262.
-	}
-	
+	\printbibliography %Prints bibliography
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	
