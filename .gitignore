@@ -1,3 +1,11 @@
 data/*.csv
 __pycache__/
+.ipynb_checkpoints
+
 .Rproj.user
+.Rhistory
+
+report/*.aux
+report/*.log
+report/*.out
+report/*.synctex.gz
