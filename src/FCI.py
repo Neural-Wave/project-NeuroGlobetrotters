@@ -1,18 +1,23 @@
+from typing import Callable
+
 import numpy as np
 import pandas as pd
 from causallearn.search.ConstraintBased.FCI import fci
-from sklearn.preprocessing import MinMaxScaler
 from causallearn.utils.PCUtils.BackgroundKnowledge import BackgroundKnowledge
 
-# Load and preprocess the dataset
-data = pd.read_csv("dataset/low_scrap.csv")
 
-# Scale the data
-scaler = MinMaxScaler()
-data_scaled = scaler.fit_transform(data)
-df_scaled = pd.DataFrame(data_scaled, columns=data.columns)
-n = data.shape[1]
+def fit_FCI(
+    X: pd.DataFrame,
+    get_knowledge: Callable[[pd.DataFrame, list], BackgroundKnowledge],
+    display=False,
+    alpha=0.05,
+) -> np.ndarray:
+    g, edges = fci(X.values)
 
-g, edges = fci(data.values)
+    g, edges = fci(X.values, background_knowledge=get_knowledge(X, g.get_nodes()))
 
-# g, edges = fci(data.values, background_knowledge=get)
+    # get adjacency matrix
+    adj = g.graph
+    adj[adj != 0] = 1
+
+    return adj

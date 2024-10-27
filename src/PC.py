@@ -14,7 +14,14 @@ def fit_PC(
     cg = pc(X.values, alpha=alpha)
     nodes = cg.G.get_nodes()
 
-    cg = pc(X.values, background_knowledge=get_knowledge(X, nodes), alpha=alpha)
+    cg = pc(
+        X.values,
+        background_knowledge=get_knowledge(X, nodes),
+        alpha=alpha,
+        uc_priority=0,
+        indepth_test="mv_fisherz",
+        mvpc=True,
+    )
 
     # visualization using pydot
     if display:
