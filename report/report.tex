@@ -10,6 +10,7 @@
 \usepackage[preprint, nonatbib]{neurips_2023}
 \usepackage{biblatex} %Imports biblatex package
 \addbibresource{bosch.bib} %Import the bibliography file
+\usepackage{graphicx}
 
 % to compile a preprint version, e.g., for submission to arXiv, add add the
 % [preprint] option:
@@ -231,21 +232,13 @@
 
     To visualize the root cause, we mainly show all nodes that feed into the target node. This is achieved by inverting the found adjacency matrix and starting from the target node, visit all its descendants recursively. Thus, we get the sub-graph of all nodes influencing the target node. 
 
-    Further, we identify the most influential path according to its total effect on the target node. (TODO?) 
+    Further, we identify the most influential path according to its total effect on the target node, as seen in Fig. \ref{fig:subgraph}.
     
     
     \section{Challenges} % Difficulties encountered and solutions.
     The most challenging issue throughout the process was to evaluate possible solutions without knowing the ground truth or just having partial ground truth.
 
-    \section{REMOVE THIS just template}
-	
-	\begin{figure}
-		\centering
-		\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
-		\caption{Sample figure caption.}
-	\end{figure}
-	
-	
+
 	
 	
 	
