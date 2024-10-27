@@ -85,13 +85,14 @@
 	
 
 	\begin{abstract}
-		We proposed a solution to a causal discovery in a multiple dataset context setting with a prior structural knowledge. Given the different measurements set, we produced an directed graph of causal influences and a ranking of an influencing variables. In addition we implemented a way to precisely constraint our causal model to reflect the changed mode. We developed a complex evaluation metric set for the unsupervised settings. Finally we designed a way to combine different approaches to causal discovery to produce the most reliable approach to generalised causal discovery setting.
+		We proposed a solution to a causal discovery in a multiple dataset context setting with a prior structural knowledge. Given the different measurements set, we produced a directed graph of causal influences and a ranking of influencing variables. In addition, we implemented a way to precisely constraint our causal model to reflect the changed mode. We developed a complex evaluation metric set for the unsupervised settings. Finally we designed a way to combine different approaches to causal discovery to produce the most reliable approach to generalised causal discovery setting. TODO
+        And visualize the identified root cause.
 	\end{abstract}
 	
 	
 	\section{Objective} % The problem being addressed and its significance.
 	
-	We've been tackling a problem, where we were given several datasets with different latent context, for those we needed to provide the directed acyclic graph, which could be interpreted casually. Namely the datasets were structured as a set of columns, which were grouped in a several blocks, with an assumption of locality between elements of a block. We needed to discover various causal related structures about the given data:
+	The stated problem is finding the directed acyclic graph representing the causal relation for an underlying process, given several datasets with different latent context. The datasets are structured as a set of columns, which were grouped in a several blocks, with an assumption of locality between elements of a block. We needed to discover various causal related structures about the given data:
 	
 	\begin{enumerate}
 		\item The underlying causal graph
@@ -104,13 +105,18 @@
 
     \subsection{Methodology}
 
-    The process is divided into three stages. First, we do not have access to any ground-truth. In the second stage, we get access to the first 15 rows of the target adjacency-matrix. In the last stage, we get additional access to the lower diagonal adjacency-matrix. We use this ground-truth as prior knowledge in the following algorithms as well as to evaluate our results.
+    The process is divided into three stages. First, we do not have access to any ground-truth. In the second stage, we get access to the first 15 rows of the target adjacency-matrix. In the last stage, we get additional access to the lower diagonal adjacency-matrix. We use this ground-truth as prior knowledge in the following algorithms as well as to evaluate our results. To evaluate the performance, we calculate the Structural Hamming Distance (SHD) between the resulting adjacency matrix and the full ground truth.
 
-    In every stage, we fit various algorithms to the given data and compared their results. We outline these algorithms in the following sections.
+    In every stage, we fit various algorithms to the given data and compared their results. We outline these algorithms and the used frameworks in the following sections.
 
     \subsection{Algorithms}
     
-    
+    \subsubsection{Causal discovery with Ordering-based Reinforcement
+    Learning (CORL)}
+    CORL\cite{CORL} uses a Reinforcement Learning (RL) approach and is implemented in the gCastle Framework. 
+
+    \subsection{DAG\_GNN}
+    In DAG-GNN \cite{DAGGNN}, the problem is formulated as a continuous optimization problem and solved using a generative model. It is impllemented in gCastle. 
 
     \subsubsection{LiNGAM}
     LiNGAM estimates structural equation models or linear causal Bayesian networks, assuming the data is non-Gaussian.
@@ -121,9 +127,10 @@
     \subsubsection{Fast Causal Inference (FCI)}
     The FCI algorithm \cite{FCI} works under both latent variables and selection bias. We use its implementation in causal-learn \cite{Causallearn}.
 
-    \subsubsection{VARMALINGRAM}
+    %\subsubsection{VARMALINGRAM}
 
-    \subsubsection{PC}
+    \subsubsection{Peter-Clark (PC)}
+    PC \cite{PC} is a general purpose algorithms for causal discovery which works by first identifying the undirected causal graph, and then directing the edges. It is also implemented in causal-learn.
     
     \subsubsection{Structural Agnostic Model (SAM)}
     We use the SAM\cite{SAM} implementation of the CausalDiscoveryToolbox (CDT). SAM implements an adversarial game in which separate models generate each variable based on the real observations from all other variables, on the hypothesis, that the target variable depends on those. A discriminator then attempts to distinguish between real and generated samples. Finally, a sparsity penalty forces each generator to consider only a small subset of the variables, yielding a sparse causal graph. SAM allows to alleviate the commonly made condition, that there is no hidden common cause to any pair of observed variables.
@@ -150,7 +157,25 @@
 
     \subsection{Causal Graph}
 
-    Comparing the various algorithms to discover causal graphs, we found LiNGAM to produce good quality graphs while being significantly faster than many others. 
+    Comparing the various algorithms to discover causal graphs, we found LiNGAM to produce good quality graphs while being significantly faster than many others. DUe to these findings, we chose it for our final implementation. An excerpt of the comparisons we did can be seen in Table \ref{comparisonSHD}.
+
+    \begin{table}
+		\caption{Comparison of different Algorithms}
+		\label{comparisonSHD}
+		\centering
+		\begin{tabular}{lr}
+			\toprule
+			\multicolumn{2}{c}{Part}                   \\
+			\cmidrule(r){1-2}
+			Name     & SHD Distance to ground truth (lower is better)  \\
+			\midrule
+			CORL  & 493       \\
+			DAG\_GNN & 543    \\
+			PC & 523     \\
+            FCI  & 523 \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
     
     \subsection{Root Cause}
     
@@ -164,7 +189,7 @@
     
     
     \section{Challenges} % Difficulties encountered and solutions.
-    The most challenging issue throughout the process was to evaluate possible solutions without knowing the ground truth.
+    The most challenging issue throughout the process was to evaluate possible solutions without knowing the ground truth or just having partial ground truth.
 
     \section{REMOVE THIS just template}
 	
@@ -179,22 +204,7 @@
 	
 	
 	
-	\begin{table}
-		\caption{Sample table title}
-		\label{sample-table}
-		\centering
-		\begin{tabular}{lll}
-			\toprule
-			\multicolumn{2}{c}{Part}                   \\
-			\cmidrule(r){1-2}
-			Name     & Description     & Size ($\mu$m) \\
-			\midrule
-			Dendrite & Input terminal  & $\sim$100     \\
-			Axon     & Output terminal & $\sim$10      \\
-			Soma     & Cell body       & up to $10^6$  \\
-			\bottomrule
-		\end{tabular}
-	\end{table}
+	
 	
 	
 	
