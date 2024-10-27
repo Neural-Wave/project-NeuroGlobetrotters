@@ -116,103 +116,57 @@
     LiNGAM estimates structural equation models or linear causal Bayesian networks, assuming the data is non-Gaussian.
     First, to apply DirectLiNGAM\cite{lingam}, we merge the datasets while introducing a new feature to differentiate the origins. 
     Secondly, we use MultiGroupDirectLiNGAM: \cite{multilingam} on the separate datasets.
-     
-    Independent component analysis (ICA-LiNGAM)
+    Additionally, we try Independent component analysis (ICA-LiNGAM)\cite{ICALINGAM} which assumes the observed variables to be linear functions of mutually independent and non-Gaussian disturbance variables.
 
-    \subsubsection{causallearn.search.ConstraintBased.FCI | fci}
+    \subsubsection{Fast Causal Inference (FCI)}
+    The FCI algorithm \cite{FCI} works under both latent variables and selection bias. We use its implementation in causal-learn \cite{Causallearn}.
 
     \subsubsection{VARMALINGRAM}
 
     \subsubsection{PC}
     
     \subsubsection{Structural Agnostic Model (SAM)}
-    We use the SAM implementation of the CausalDiscoveryToolbox (CDT). SAM implements an adversarial game in which a separate model generates each variable, given real values from all others. A discriminator attempts to distinguish between real and generated samples. Finally, a sparsity penalty forces each generator to consider only a small subset of the variables, yielding a sparse causal graph.
-    Lastly, the commonly made “causal sufficiency” condition (that there exist no hidden common cause to any pair of observed variables) can also be alleviated.
-    each conditional generator (an artificial neural network) “plays” to produce one of the variables Xi given real observations of a (small) subset of all the others, hypothesized to be its direct causes, and noise.
-    It is orders of magnitudes slower than Lingam, but also a lot better \cite{SAM}.
+    We use the SAM\cite{SAM} implementation of the CausalDiscoveryToolbox (CDT). SAM implements an adversarial game in which separate models generate each variable based on the real observations from all other variables, on the hypothesis, that the target variable depends on those. A discriminator then attempts to distinguish between real and generated samples. Finally, a sparsity penalty forces each generator to consider only a small subset of the variables, yielding a sparse causal graph. SAM allows to alleviate the commonly made condition, that there is no hidden common cause to any pair of observed variables.
+    It is shown to be orders of magnitudes slower than LiNGAM for example, but also significantly better.
 
     \subsubsection{LLM: o1-preview from OpenAI}
-    We prompt the o1-preview LLM from OpenAI to respond with the TODO
+    We prompt the o1-preview LLM from OpenAI to respond with the nodes causing the increased value, given the datasets.
     
     \subsection{Frameworks}
     \subsubsection{DoWhy}
-    https://github.com/py-why/dowhy
-    \cite{DoWhy} \cite{sharma2020dowhyendtoendlibrarycausal}
+    The key feature of DoWhy \cite{DoWhy} \cite{sharma2020dowhyendtoendlibrarycausal} is that it provides algorithms for the refutation and falsification of causal graphs.
     
-    \subsubsection{CausalDiscoveryToolbox}
+    
+    \subsubsection{CausalDiscoveryToolbox (CDT)}
+    The CausalDiscoveryToolbox supports causal inference in graphs and in pairwise settings. It implements several algorithms, including the PC, LiNGAM, and SAM algorithms.
     https://github.com/FenTechSolutions/CausalDiscoveryToolbox 
     \cite{CDT}
     
     \subsubsection{gCastle}
-    https://github.com/huawei-noah/trustworthyAI/tree/master/gcastle
+    GCastle is a causal structure learning toolchain containing various functionalities related to causal learning such as the PC and LiNGAM algorithms. 
     \cite{zhang2021gcastlepythontoolboxcausal}
     
     \section{Results} % Key findings, metrics, or visualizations.
 
     \subsection{Causal Graph}
+
+    Comparing the various algorithms to discover causal graphs, we found LiNGAM to produce good quality graphs while being significantly faster than many others. 
+    
     \subsection{Root Cause}
+    
+    
+    
     \subsection{Visualisation}
+
+    To visualize the root cause, we mainly show all nodes that feed into the target node. This is achieved by inverting the found adjacency matrix and starting from the target node, visit all its descendants recursively. Thus, we get the sub-graph of all nodes influencing the target node. 
+
+    Further, we identify the most influential path according to its total effect on the target node. (TODO?) 
     
     
     \section{Challenges} % Difficulties encountered and solutions.
     The most challenging issue throughout the process was to evaluate possible solutions without knowing the ground truth.
- 
-	\begin{center}
-		\url{http://www.neurips.cc/}
-	\end{center}
 
-
-	The documentation for \verb+natbib+ may be found at
-	\begin{center}
-		\url{http://mirrors.ctan.org/macros/latex/contrib/natbib/natnotes.pdf}
-	\end{center}
-	Of note is the command \verb+\citet+, which produces citations appropriate for
-	use in inline text.  For example,
-	\begin{verbatim}
-		\citet{hasselmo} investigated\dots
-	\end{verbatim}
-	produces
-	\begin{quote}
-		Hasselmo, et al.\ (1995) investigated\dots
-	\end{quote}
-	
-	
-	If you wish to load the \verb+natbib+ package with options, you may add the
-	following before loading the \verb+neurips_2023+ package:
-	\begin{verbatim}
-		\PassOptionsToPackage{options}{natbib}
-	\end{verbatim}
-	
-	
-	If \verb+natbib+ clashes with another package you load, you can add the optional
-	argument \verb+nonatbib+ when loading the style file:
-	\begin{verbatim}
-		\usepackage[nonatbib]{neurips_2023}
-	\end{verbatim}
-	
-	
-	As submission is double blind, refer to your own published work in the third
-	person. That is, use ``In the previous work of Jones et al.\ [4],'' not ``In our
-	previous work [4].'' If you cite your other papers that are not widely available
-	(e.g., a journal paper under review), use anonymous author names in the
-	citation, e.g., an author of the form ``A.\ Anonymous'' and include a copy of the anonymized paper in the supplementary material.
-	
-	
-	\subsection{Footnotes}
-	
-	
-	Footnotes should be used sparingly.  If you do require a footnote, indicate
-	footnotes with a number\footnote{Sample of the first footnote.} in the
-	text. Place the footnotes at the bottom of the page on which they appear.
-	Precede the footnote with a horizontal rule of 2~inches (12~picas).
-	
-	
-	Note that footnotes are properly typeset \emph{after} punctuation
-	marks.\footnote{As in this example.}
-	
-	
-	\subsection{Figures}
-	
+    \section{REMOVE THIS just template}
 	
 	\begin{figure}
 		\centering
@@ -221,28 +175,8 @@
 	\end{figure}
 	
 	
-	All artwork must be neat, clean, and legible. Lines should be dark enough for
-	purposes of reproduction. The figure number and caption always appear after the
-	figure. Place one line space before the figure caption and one line space after
-	the figure. The figure caption should be lower case (except for first word and
-	proper nouns); figures are numbered consecutively.
 	
 	
-	You may use color figures.  However, it is best for the figure captions and the
-	paper body to be legible if the paper is printed in either black/white or in
-	color.
-	
-	
-	\subsection{Tables}
-	
-	
-	Note that publication-quality tables \emph{do not contain vertical rules.} We
-	strongly suggest the use of the \verb+booktabs+ package, which allows for
-	typesetting high-quality, professional tables:
-	\begin{center}
-		\url{https://www.ctan.org/pkg/booktabs}
-	\end{center}
-	This package was used to typeset Table~\ref{sample-table}.
 	
 	
 	\begin{table}
