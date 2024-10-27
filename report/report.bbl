@@ -1,0 +1,354 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{DoWhy}{article}{}
+      \name{author}{5}{}{%
+        {{hash=6691b42ff05cd61a504a3dd11626683e}{%
+           family={Bl{ö}baum},
+           familyi={B\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=39ccffbc8ece3d15a8e482a606547fbe}{%
+           family={G{ö}tz},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bfbceaa75f46cb9f38a4f01da2e0e7df}{%
+           family={Budhathoki},
+           familyi={B\bibinitperiod},
+           given={Kailash},
+           giveni={K\bibinitperiod}}}%
+        {{hash=85ec921aa539d8e23d98f09b57bcfbe7}{%
+           family={Mastakouri},
+           familyi={M\bibinitperiod},
+           given={Atalanti\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2ffe1708b0e014a39d80d26907053160}{%
+           family={Janzing},
+           familyi={J\bibinitperiod},
+           given={Dominik},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{3808ee4ccf54001917d13249aea42c42}
+      \strng{fullhash}{dc7741dacc592c0f347d8cd788e821fd}
+      \strng{bibnamehash}{3808ee4ccf54001917d13249aea42c42}
+      \strng{authorbibnamehash}{3808ee4ccf54001917d13249aea42c42}
+      \strng{authornamehash}{3808ee4ccf54001917d13249aea42c42}
+      \strng{authorfullhash}{dc7741dacc592c0f347d8cd788e821fd}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{147}
+      \field{title}{DoWhy-GCM: An Extension of DoWhy for Causal Inference in Graphical Causal Models}
+      \field{volume}{25}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+      \verb{urlraw}
+      \verb http://jmlr.org/papers/v25/22-1258.html
+      \endverb
+      \verb{url}
+      \verb http://jmlr.org/papers/v25/22-1258.html
+      \endverb
+    \endentry
+    \entry{lingam}{article}{}
+      \name{author}{5}{}{%
+        {{hash=a628fed4e57e546afd996e73cc4dc0db}{%
+           family={Ikeuchi},
+           familyi={I\bibinitperiod},
+           given={Takashi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=864503ea768a5b6e337d54a3574d696e}{%
+           family={Ide},
+           familyi={I\bibinitperiod},
+           given={Mayumi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ac97728520689a643e37005c40e0d11d}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=777f6d1d26b8af708455ce2409a06d26}{%
+           family={Maeda},
+           familyi={M\bibinitperiod},
+           given={Takashi\bibnamedelima Nicholas},
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=d5235ea47ea56947d9cbb725fbbf5e5c}{%
+           family={Shimizu},
+           familyi={S\bibinitperiod},
+           given={Shohei},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{824782f10efb3d6769e4c907a9766395}
+      \strng{fullhash}{4e5aa42b54c85cc04f8334ca36729e87}
+      \strng{bibnamehash}{824782f10efb3d6769e4c907a9766395}
+      \strng{authorbibnamehash}{824782f10efb3d6769e4c907a9766395}
+      \strng{authornamehash}{824782f10efb3d6769e4c907a9766395}
+      \strng{authorfullhash}{4e5aa42b54c85cc04f8334ca36729e87}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{14}
+      \field{title}{Python package for causal discovery based on LiNGAM}
+      \field{volume}{24}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb http://jmlr.org/papers/v24/21-0321.html
+      \endverb
+      \verb{url}
+      \verb http://jmlr.org/papers/v24/21-0321.html
+      \endverb
+    \endentry
+    \entry{CDT}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=53e478511bc02a96c8f8c0f632254a9c}{%
+           family={Kalainathan},
+           familyi={K\bibinitperiod},
+           given={Diviyan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ad7db3a4a8df72767266761eca8bf927}{%
+           family={Goudet},
+           familyi={G\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{c24bd6bd0846368dec217af4449ddd7f}
+      \strng{fullhash}{c24bd6bd0846368dec217af4449ddd7f}
+      \strng{bibnamehash}{c24bd6bd0846368dec217af4449ddd7f}
+      \strng{authorbibnamehash}{c24bd6bd0846368dec217af4449ddd7f}
+      \strng{authornamehash}{c24bd6bd0846368dec217af4449ddd7f}
+      \strng{authorfullhash}{c24bd6bd0846368dec217af4449ddd7f}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.CO}
+      \field{eprinttype}{arXiv}
+      \field{title}{Causal Discovery Toolbox: Uncover causal relationships in Python}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1903.02278
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1903.02278
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1903.02278
+      \endverb
+    \endentry
+    \entry{SAM}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=53e478511bc02a96c8f8c0f632254a9c}{%
+           family={Kalainathan},
+           familyi={K\bibinitperiod},
+           given={Diviyan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ad7db3a4a8df72767266761eca8bf927}{%
+           family={Goudet},
+           familyi={G\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=284a778b6c8e17f1aae38e288dc06036}{%
+           family={Guyon},
+           familyi={G\bibinitperiod},
+           given={Isabelle},
+           giveni={I\bibinitperiod}}}%
+        {{hash=47d681c0cbae75196012a538c46ccc06}{%
+           family={Lopez-Paz},
+           familyi={L\bibinithyphendelim P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e42d4b26508977c4c33875a74a948849}{%
+           family={Sebag},
+           familyi={S\bibinitperiod},
+           given={Michèle},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e3732bae2d60bda8c0c6bff4fa16505}
+      \strng{fullhash}{75b3c1d20ca27bdbc096edc9796bba2a}
+      \strng{bibnamehash}{0e3732bae2d60bda8c0c6bff4fa16505}
+      \strng{authorbibnamehash}{0e3732bae2d60bda8c0c6bff4fa16505}
+      \strng{authornamehash}{0e3732bae2d60bda8c0c6bff4fa16505}
+      \strng{authorfullhash}{75b3c1d20ca27bdbc096edc9796bba2a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{title}{Structural Agnostic Modeling: Adversarial Learning of Causal Graphs}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 1803.04929
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1803.04929
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1803.04929
+      \endverb
+    \endentry
+    \entry{sharma2020dowhyendtoendlibrarycausal}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=af1491a2bbe671539e635699d0e0b9c5}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Amit},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62ef108f731f13738a37da8b832c9927}{%
+           family={Kiciman},
+           familyi={K\bibinitperiod},
+           given={Emre},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{43217ca0b66ddf1911c7626373a59f32}
+      \strng{fullhash}{43217ca0b66ddf1911c7626373a59f32}
+      \strng{bibnamehash}{43217ca0b66ddf1911c7626373a59f32}
+      \strng{authorbibnamehash}{43217ca0b66ddf1911c7626373a59f32}
+      \strng{authornamehash}{43217ca0b66ddf1911c7626373a59f32}
+      \strng{authorfullhash}{43217ca0b66ddf1911c7626373a59f32}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ME}
+      \field{eprinttype}{arXiv}
+      \field{title}{DoWhy: An End-to-End Library for Causal Inference}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2011.04216
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2011.04216
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2011.04216
+      \endverb
+    \endentry
+    \entry{multilingam}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d5235ea47ea56947d9cbb725fbbf5e5c}{%
+           family={Shimizu},
+           familyi={S\bibinitperiod},
+           given={Shohei},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5235ea47ea56947d9cbb725fbbf5e5c}
+      \strng{fullhash}{d5235ea47ea56947d9cbb725fbbf5e5c}
+      \strng{bibnamehash}{d5235ea47ea56947d9cbb725fbbf5e5c}
+      \strng{authorbibnamehash}{d5235ea47ea56947d9cbb725fbbf5e5c}
+      \strng{authornamehash}{d5235ea47ea56947d9cbb725fbbf5e5c}
+      \strng{authorfullhash}{d5235ea47ea56947d9cbb725fbbf5e5c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A linear non-Gaussian structural equation model called LiNGAM is an identifiable model for exploratory causal analysis. Previous methods estimate a causal ordering of variables and their connection strengths based on a single dataset. However, in many application domains, data are obtained under different conditions, that is, multiple datasets are obtained rather than a single dataset. In this paper, we present a new method to jointly estimate multiple LiNGAMs under the assumption that the models share a causal ordering but may have different connection strengths and differently distributed variables. In simulations, the new method estimates the models more accurately than estimating them separately.}
+      \field{issn}{0925-2312}
+      \field{journaltitle}{Neurocomputing}
+      \field{title}{Joint estimation of linear non-Gaussian acyclic models}
+      \field{volume}{81}
+      \field{year}{2012}
+      \field{pages}{104\bibrangedash 107}
+      \range{pages}{4}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.neucom.2011.11.005
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925231211006813
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925231211006813
+      \endverb
+      \keyw{Structural equation models,Non-Gaussianity,Causal discovery,Analysis of multiple groups,Graphical models}
+    \endentry
+    \entry{zhang2021gcastlepythontoolboxcausal}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=59099d02d7a6dc526a543c6c6bab94e7}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Keli},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d0660bc07c0d4066a921884fc6fd2d63}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Shengyu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=922f931bf43a2fd7c6a7ce9e0b98f969}{%
+           family={Kalander},
+           familyi={K\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b5ae79cb6419a2d1583665f73717247b}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Ignavier},
+           giveni={I\bibinitperiod}}}%
+        {{hash=262d1cd57333abdce8fcda673c2e2608}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Junjian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=897b5db293761097dbf974635ca0dfa7}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zhitang},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=8de3ff42da6dfda8c730a0ef0fd2c038}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Lujia},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e5c5b99b9ec9c75962c424cf5650ddf}
+      \strng{fullhash}{e229278ee626b11335a8ab61e55dcabe}
+      \strng{bibnamehash}{5e5c5b99b9ec9c75962c424cf5650ddf}
+      \strng{authorbibnamehash}{5e5c5b99b9ec9c75962c424cf5650ddf}
+      \strng{authornamehash}{5e5c5b99b9ec9c75962c424cf5650ddf}
+      \strng{authorfullhash}{e229278ee626b11335a8ab61e55dcabe}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{gCastle: A Python Toolbox for Causal Discovery}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2111.15155
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2111.15155
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2111.15155
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

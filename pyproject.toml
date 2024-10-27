@@ -5,6 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "causalassembly>=1.1.3",
+    "cdt>=0.6.0",
     "dowhy>=0.11.1",
     "gcastle>=1.0.3",
     "idtxl",

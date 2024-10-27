@@ -155,6 +155,25 @@ wheels = [
 ]
 
 [[package]]
+name = "causalassembly"
+version = "1.1.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "matplotlib" },
+    { name = "networkx" },
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "requests" },
+    { name = "rpy2" },
+    { name = "scipy" },
+    { name = "sympy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b6/5f/ccf9d4504e57b30987e3d6b28c2f3688b689e0d44a3b90c314be75d4ebdb/causalAssembly-1.1.3.tar.gz", hash = "sha256:af374707ae8bc6e29cf03f869ae1d532e102968481370df4bc2282525e5c7a1c", size = 58939 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/96/49/63ed1eea00bcdcb55bdf374a94ee35f4b6cb2be283c67158c912df640b18/causalAssembly-1.1.3-py3-none-any.whl", hash = "sha256:9bcbb728ad1137a08e8d9a3932893fcd36242c7dc37395eef19a749ad724618f", size = 52629 },
+]
+
+[[package]]
 name = "causalnex"
 version = "0.12.1"
 source = { registry = "https://pypi.org/simple" }
@@ -174,6 +193,28 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/0c/7c/1698630b3dd6972bcdc4eb3569f35fd55aba4393cdb50e71cb3b63e1366a/causalnex-0.12.1.tar.gz", hash = "sha256:6b6d69e7fcdfb234e28d4ed41deac3935810f0c74d4f629eae1d72789f087437", size = 112745 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f3/47/8458f3d575f7b20cac3a7fc3480e010606cbe00fb7f9f598c6588d966afc/causalnex-0.12.1-py3-none-any.whl", hash = "sha256:1328cfc240e53f6effd03974bc3282d15b085ad5f3becb118f1da02516126ed3", size = 153889 },
+]
+
+[[package]]
+name = "cdt"
+version = "0.6.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "gputil" },
+    { name = "joblib" },
+    { name = "networkx" },
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "requests" },
+    { name = "scikit-learn" },
+    { name = "scipy" },
+    { name = "skrebate" },
+    { name = "statsmodels" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/04/92/0367c7e522efefb8857840674d2a963e97359e693be74843ded7426e3506/cdt-0.6.0.tar.gz", hash = "sha256:cecfb6390440311d0cb7e5446e97f9eb3e3b7d90d9b10d3b4cbbabc2d4c23dba", size = 97696 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2d/e6/ce5138a1251cea35dcf8559ce1ea2247c65e46cf762e066f02967ed1502a/cdt-0.6.0-py3-none-any.whl", hash = "sha256:a90401b688597c3ccf23cc7b10c62e19df69dc9277095bab40a1343c6e89996b", size = 921069 },
 ]
 
 [[package]]
@@ -646,6 +687,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/37/22/8505ddd00d21d8b4a
 wheels = [
     { url = "https://files.pythonhosted.org/packages/24/1d/c12be2c0f35d3e9360fe0a561c32fe1caf826ac469dcb87f18a873c0917f/gcastle-1.0.3-py3-none-any.whl", hash = "sha256:703b38713e9459e4ca43a5547e83076b3a9a9b459f0279b84e953a6df71d74dc", size = 214903 },
 ]
+
+[[package]]
+name = "gputil"
+version = "1.4.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ed/0e/5c61eedde9f6c87713e89d794f01e378cfd9565847d4576fa627d758c554/GPUtil-1.4.0.tar.gz", hash = "sha256:099e52c65e512cdfa8c8763fca67f5a5c2afb63469602d5dcb4d296b3661efb9", size = 5545 }
 
 [[package]]
 name = "gpytorch"
@@ -1507,6 +1554,8 @@ name = "neuralwave"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "causalassembly" },
+    { name = "cdt" },
     { name = "dowhy" },
     { name = "gcastle" },
     { name = "idtxl" },
@@ -1517,6 +1566,8 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "causalassembly", specifier = ">=1.1.3" },
+    { name = "cdt", specifier = ">=0.6.0" },
     { name = "dowhy", specifier = ">=0.11.1" },
     { name = "gcastle", specifier = ">=1.0.3" },
     { name = "idtxl", directory = "IDTxl" },
@@ -2471,6 +2522,21 @@ wheels = [
 ]
 
 [[package]]
+name = "rpy2"
+version = "3.5.16"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cffi" },
+    { name = "jinja2" },
+    { name = "packaging", marker = "platform_system == 'Windows'" },
+    { name = "tzlocal" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/20/4a/2c7a3e08c4db3eb6c5fd050815b11947073997d0a521cd83c7dec1946d2e/rpy2-3.5.16.tar.gz", hash = "sha256:837e2f74583658a5c4c339761a73f9434f33ef9ced3e30c64da7562165c2801b", size = 220028 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/16/21/1802c3e09cf3bcc850d5c439a21aa2b5a004ba3d6f61789d42db6de05364/rpy2-3.5.16-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:f076b34bd79f62ae583e75acc1b305ba73a6639ea5c9a44dc53896709ccd8ba0", size = 299937 },
+]
+
+[[package]]
 name = "ruptures"
 version = "1.1.9"
 source = { registry = "https://pypi.org/simple" }
@@ -2663,6 +2729,17 @@ sdist = { url = "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f1
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254", size = 11053 },
 ]
+
+[[package]]
+name = "skrebate"
+version = "0.62"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "scikit-learn" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ee/04/1fa0073d145cc38e1396ef21e8c6be998d152555c64d1d54db9ce8e2c62c/skrebate-0.62.tar.gz", hash = "sha256:b20dad4dc52f650e1f7960151314840f34251222cae0a78ac23d9f6d377ca558", size = 19835 }
 
 [[package]]
 name = "sniffio"
@@ -2916,6 +2993,27 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8", size = 85321 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
+]
+
+[[package]]
+name = "tzdata"
+version = "2024.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e1/34/943888654477a574a86a98e9896bae89c7aa15078ec29f490fef2f1e5384/tzdata-2024.2.tar.gz", hash = "sha256:7d85cc416e9382e69095b7bdf4afd9e3880418a2413feec7069d533d6b4e31cc", size = 193282 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a6/ab/7e5f53c3b9d14972843a647d8d7a853969a58aecc7559cb3267302c94774/tzdata-2024.2-py2.py3-none-any.whl", hash = "sha256:a48093786cdcde33cad18c2555e8532f34422074448fbc874186f0abd79565cd", size = 346586 },
+]
+
+[[package]]
+name = "tzlocal"
+version = "5.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "tzdata", marker = "platform_system == 'Windows'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/04/d3/c19d65ae67636fe63953b20c2e4a8ced4497ea232c43ff8d01db16de8dc0/tzlocal-5.2.tar.gz", hash = "sha256:8d399205578f1a9342816409cc1e46a93ebd5755e39ea2d85334bea911bf0e6e", size = 30201 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/97/3f/c4c51c55ff8487f2e6d0e618dba917e3c3ee2caae6cf0fbb59c9b1876f2e/tzlocal-5.2-py3-none-any.whl", hash = "sha256:49816ef2fe65ea8ac19d19aa7a1ae0551c834303d5014c6d5a62e4cbda8047b8", size = 17859 },
 ]
 
 [[package]]
