@@ -190,6 +190,8 @@
 
     Comparing the various algorithms to discover causal graphs, we found LiNGAM to produce good quality graphs while being significantly faster than many others. DUe to these findings, we chose it for our final implementation. An excerpt of the comparisons we did can be seen in Table \ref{comparisonSHD}.
 
+    The final resulting graph is shown in Fig \ref{fig:wholegraph}.
+    
     \begin{table}
 		\caption{Comparison of different Algorithms}
 		\label{comparisonSHD}
@@ -207,10 +209,23 @@
 			\bottomrule
 		\end{tabular}
 	\end{table}
+
+     \begin{figure}
+         \centering
+         \includegraphics[width=0.75\linewidth]{whole_graph_result.jpeg}
+         \caption{The entire causal graph}
+         \label{fig:wholegraph}
+     \end{figure}
     
     \subsection{Root Cause}
     
-    
+    The sub-graph showing the root cause is visualised in Fig. \ref{fig:subgraph}.
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.75\linewidth]{subgraph_result.jpeg}
+        \caption{The sub-graph showing the root cause, from Station2\_mp\_13 to Station2\_mp\_28 to Station5\_mp\_85.}
+        \label{fig:subgraph}
+    \end{figure}
     
     \subsection{Visualisation}
 
