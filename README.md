@@ -15,3 +15,6 @@ Implemented algorithms:
 * CGNN
 * CDT
 * SAMv1
+
+
+Check out our interactive graph: [causal_graph.html]
