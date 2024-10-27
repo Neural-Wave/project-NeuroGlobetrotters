@@ -2362,13 +2362,19 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">lingam</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">lingam</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">multilingam</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">SAM</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">DoWhy</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">sharma2020dowhyendtoendlibrarycausal</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">CDT</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">zhang2021gcastlepythontoolboxcausal</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">CORL</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">DAGGNN</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">lingam</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">multilingam</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">ICALINGAM</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">FCI</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Causallearn</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">PC</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">SAM</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">DoWhy</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">sharma2020dowhyendtoendlibrarycausal</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">CDT</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">zhang2021gcastlepythontoolboxcausal</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

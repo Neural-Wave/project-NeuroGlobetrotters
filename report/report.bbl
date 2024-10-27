@@ -286,6 +286,243 @@
       \endverb
       \keyw{Structural equation models,Non-Gaussianity,Causal discovery,Analysis of multiple groups,Graphical models}
     \endentry
+    \entry{ICALINGAM}{article}{}
+      \name{author}{4}{}{%
+        {{hash=d5235ea47ea56947d9cbb725fbbf5e5c}{%
+           family={Shimizu},
+           familyi={S\bibinitperiod},
+           given={Shohei},
+           giveni={S\bibinitperiod}}}%
+        {{hash=198d6e58844515dee7766cd2b34954e4}{%
+           family={Hoyer},
+           familyi={H\bibinitperiod},
+           given={Patrik\bibnamedelima O.},
+           giveni={P\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=d8d0cf7bd57572ea220ffe8f52affb0a}{%
+           family={Hyvarinen},
+           familyi={H\bibinitperiod},
+           given={Aapo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1c0a201c7c42214ae59d2393844a167f}{%
+           family={Kerminen},
+           familyi={K\bibinitperiod},
+           given={Antti},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd744ea322f537b9a9fe03cda57d4917}
+      \strng{fullhash}{18f89ab84f3f6fe2fc1c3d1f4baf2bef}
+      \strng{bibnamehash}{cd744ea322f537b9a9fe03cda57d4917}
+      \strng{authorbibnamehash}{cd744ea322f537b9a9fe03cda57d4917}
+      \strng{authornamehash}{cd744ea322f537b9a9fe03cda57d4917}
+      \strng{authorfullhash}{18f89ab84f3f6fe2fc1c3d1f4baf2bef}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{72}
+      \field{title}{A Linear Non-Gaussian Acyclic Model for Causal Discovery}
+      \field{volume}{7}
+      \field{year}{2006}
+      \field{pages}{2003\bibrangedash 2030}
+      \range{pages}{28}
+      \verb{urlraw}
+      \verb http://jmlr.org/papers/v7/shimizu06a.html
+      \endverb
+      \verb{url}
+      \verb http://jmlr.org/papers/v7/shimizu06a.html
+      \endverb
+    \endentry
+    \entry{PC}{book}{}
+      \name{author}{3}{}{%
+        {{hash=f0924fa092ce0a8f24b79fcf1e746c8f}{%
+           family={Spirtes},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d92f65fed9d3110577c6ff13a43603b6}{%
+           family={Glymour},
+           familyi={G\bibinitperiod},
+           given={Clark},
+           giveni={C\bibinitperiod}}}%
+        {{hash=02f6653c0e96cdc7d40f942944d5e3fb}{%
+           family={Scheines},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{7dcf217dc740ee467be2e1a4db628293}
+      \strng{fullhash}{7dcf217dc740ee467be2e1a4db628293}
+      \strng{bibnamehash}{7dcf217dc740ee467be2e1a4db628293}
+      \strng{authorbibnamehash}{7dcf217dc740ee467be2e1a4db628293}
+      \strng{authornamehash}{7dcf217dc740ee467be2e1a4db628293}
+      \strng{authorfullhash}{7dcf217dc740ee467be2e1a4db628293}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-4612-7650-0}
+      \field{journaltitle}{Causation, Prediction, and Search}
+      \field{month}{01}
+      \field{title}{Causation, Prediction, and Search}
+      \field{volume}{81}
+      \field{year}{1993}
+      \verb{doi}
+      \verb 10.1007/978-1-4612-2748-9
+      \endverb
+    \endentry
+    \entry{FCI}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f0924fa092ce0a8f24b79fcf1e746c8f}{%
+           family={Spirtes},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=fd4de594707410150a3fe168adc655a4}{%
+           family={Meek},
+           familyi={M\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=eabf99a26b5a1ac7dd40719ea6e697e2}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Thomas\bibnamedelima S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f650cd59d40b0944f77ce0ded8a79a39}
+      \strng{fullhash}{f650cd59d40b0944f77ce0ded8a79a39}
+      \strng{bibnamehash}{f650cd59d40b0944f77ce0ded8a79a39}
+      \strng{authorbibnamehash}{f650cd59d40b0944f77ce0ded8a79a39}
+      \strng{authornamehash}{f650cd59d40b0944f77ce0ded8a79a39}
+      \strng{authorfullhash}{f650cd59d40b0944f77ce0ded8a79a39}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Causal Inference in the Presence of Latent Variables and Selection Bias}
+      \field{volume}{abs/1302.4983}
+      \field{year}{2013}
+      \verb{eprint}
+      \verb 1302.4983
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1302.4983
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1302.4983
+      \endverb
+    \endentry
+    \entry{CORL}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=17536ccda0262dc84f08cf8fc805947d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiaoqiang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=243af7faac6928decf411d5f3c14262b}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Yali},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d0660bc07c0d4066a921884fc6fd2d63}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Shengyu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3500961cca0db344e93f7709716e7a97}{%
+           family={Ke},
+           familyi={K\bibinitperiod},
+           given={Liangjun},
+           giveni={L\bibinitperiod}}}%
+        {{hash=897b5db293761097dbf974635ca0dfa7}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zhitang},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=8f534f1e9ccc15c7efd4e787cda9a148}{%
+           family={Hao},
+           familyi={H\bibinitperiod},
+           given={Jianye},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2f3ea981fa5a715a69118b48e576a9f5}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b1a571b73e40940ded3c9bd06fe85fbd}
+      \strng{fullhash}{ffe7eca3a27641b72be9426b9ada43bc}
+      \strng{bibnamehash}{b1a571b73e40940ded3c9bd06fe85fbd}
+      \strng{authorbibnamehash}{b1a571b73e40940ded3c9bd06fe85fbd}
+      \strng{authornamehash}{b1a571b73e40940ded3c9bd06fe85fbd}
+      \strng{authorfullhash}{ffe7eca3a27641b72be9426b9ada43bc}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Ordering-Based Causal Discovery with Reinforcement Learning}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2105.06631
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2105.06631
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2105.06631
+      \endverb
+    \endentry
+    \entry{DAGGNN}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=512fbf6290ad46e1e3408d0e31b6f54f}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f12458352bf48d8ebe2ba46b11310c19}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f33b4e26a1b2a1f3288caaf6f6d6385d}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Tian},
+           giveni={T\bibinitperiod}}}%
+        {{hash=895459f795b2530f8583442ac07ff7c5}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Mo},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{57916960d88f63855cd3664a9732175b}
+      \strng{fullhash}{a62d90a3f50f16b44285041c32dbf290}
+      \strng{bibnamehash}{57916960d88f63855cd3664a9732175b}
+      \strng{authorbibnamehash}{57916960d88f63855cd3664a9732175b}
+      \strng{authornamehash}{57916960d88f63855cd3664a9732175b}
+      \strng{authorfullhash}{a62d90a3f50f16b44285041c32dbf290}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{DAG-GNN: DAG Structure Learning with Graph Neural Networks}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1904.10098
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1904.10098
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1904.10098
+      \endverb
+    \endentry
     \entry{zhang2021gcastlepythontoolboxcausal}{misc}{}
       \name{author}{7}{}{%
         {{hash=59099d02d7a6dc526a543c6c6bab94e7}{%
@@ -347,6 +584,72 @@
       \verb{url}
       \verb https://arxiv.org/abs/2111.15155
       \endverb
+    \endentry
+    \entry{Causallearn}{article}{}
+      \name{author}{9}{}{%
+        {{hash=7db96fb63903ce5e336fd1c0b537e65d}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Yujia},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=571527e12e3b0bdd6adc95e83090cb30}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Biwei},
+           giveni={B\bibinitperiod}}}%
+        {{hash=06debc36f6b61a405e8f0da1c7ccd6ca}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a666124dff991badd0e99067f12a743f}{%
+           family={Ramsey},
+           familyi={R\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3ea091639cfde4ce3d5b74c07c332087}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Mingming},
+           giveni={M\bibinitperiod}}}%
+        {{hash=45e7ee9006338f36a0f54e376e63620c}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Ruichu},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d5235ea47ea56947d9cbb725fbbf5e5c}{%
+           family={Shimizu},
+           familyi={S\bibinitperiod},
+           given={Shohei},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f0924fa092ce0a8f24b79fcf1e746c8f}{%
+           family={Spirtes},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=62735e1af0391d63c09ff9fbcd3d4d54}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Kun},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{62aaf3a9e4329e13ec74d96b2bc6bbd6}
+      \strng{fullhash}{f118258f7b20f4033c7f6241367579f0}
+      \strng{bibnamehash}{62aaf3a9e4329e13ec74d96b2bc6bbd6}
+      \strng{authorbibnamehash}{62aaf3a9e4329e13ec74d96b2bc6bbd6}
+      \strng{authornamehash}{62aaf3a9e4329e13ec74d96b2bc6bbd6}
+      \strng{authorfullhash}{f118258f7b20f4033c7f6241367579f0}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{60}
+      \field{title}{Causal-learn: Causal discovery in python}
+      \field{volume}{25}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
     \endentry
   \enddatalist
 \endrefsection

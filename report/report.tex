@@ -7,7 +7,7 @@
 
 
 % ready for submission
-\usepackage[preprint]{neurips_2023}
+\usepackage[preprint, nonatbib]{neurips_2023}
 \usepackage{biblatex} %Imports biblatex package
 \addbibresource{bosch.bib} %Import the bibliography file
 
@@ -85,22 +85,49 @@
 	
 
 	\begin{abstract}
-		We proposed a solution to a causal discovery in a multiple dataset context setting with a prior structural knowledge. Given the different measurements set, we produced a directed graph of causal influences and a ranking of influencing variables. In addition, we implemented a way to precisely constraint our causal model to reflect the changed mode. We developed a complex evaluation metric set for the unsupervised settings. Finally we designed a way to combine different approaches to causal discovery to produce the most reliable approach to generalised causal discovery setting. TODO
-        And visualize the identified root cause.
+		We proposed a solution to a causal discovery in a multiple dataset context setting with a prior structural knowledge. Given the different measurements set, we produced a directed graph of causal influences and a ranking of influencing variables. In addition, we implemented a way to precisely constraint our causal model to reflect the changed mode. We developed a complex evaluation metric set for the unsupervised settings. Finally we designed a way to combine different approaches to causal discovery to produce the most reliable approach to generalised causal discovery setting. 
 	\end{abstract}
 	
 	
-	\section{Objective} % The problem being addressed and its significance.
+
+
+
+	\section{Objective}
 	
-	The stated problem is finding the directed acyclic graph representing the causal relation for an underlying process, given several datasets with different latent context. The datasets are structured as a set of columns, which were grouped in a several blocks, with an assumption of locality between elements of a block. We needed to discover various causal related structures about the given data:
+	We've been tackling a problem, where we were given several datasets with different latent context, for those we needed to provide the directed acyclic graph, which could be interpreted casually. Namely the datasets were structured as a set of columns, which were grouped in a several blocks, with an assumption of locality between elements of a block. We needed to discover various causal related structures about the given data:
 	
 	\begin{enumerate}
 		\item The underlying causal graph
 		\item The root causes of the observed change
 		\item Visualisation of the graph, the root causes and their influence
 	\end{enumerate}
-
-
+	
+	\subsection{Causal discovery}
+	
+	Causal discovery is a classic task, which also is extremely challenging. The causality discovery is used mainly in biology (Sachs, 2005) The task is to infer a Directed Acyclic Graph which minimizes a specific metric (which is trying to model causality) by observing the given data. The classic algorithms included using constrained-based approach to construct a graph (Glymour,2001: 5.4.2); the more novel ones usually vary in their assumptions (e.g. linearity and non-Gaussianity for DirectLiNGAM (Shimizu et al 2011)), but propose also more flexible ways to learn and evaluate the results (Zheng et al 2018). The complexity of the causal discovery relates to several facts: searching over the space of DAG is known to be NP-hard (Chickering 1996). 
+	
+	A recent major breakthrough in the field can be characterised by the introduction of a reformulation of a task to a continuous optimisation problem (Zheng, 2018); this introduced a family of new gradient-optimisational algorithms (Wang et al, 2021; Yu et al. 2019), however some skepticism is also present (Kaiser, 2021).
+	
+	\subsection{Evaluation of causal graph in unknown setting}
+	
+	As the task in a general setting should be solved without any ground truth given (except structural prior knowledge), one should come up with an algorithm for this. The task is not well researched, however there are some general strategies for doing such. First, you can divide your data to several sets, and try to evaluate your DAGs on the test data using Markov blanket (Pearl, 1986) , following (Wang, 2025). Second, a set of formal criterions for the graph evaluation can be suggested, such as generalizability (Yang, 2019), and graph falsifying metrics (Eulig, 2023). Both ways were computationally infeasible for us, so we've developed 4 intermediate strategies for the evaluation:
+	
+	\subsubsection{Peer dataset}
+	
+	The first way to evaluate the algorithms was by providing a helper dataset (i.e. the most popular nowadays IHDP (Shalit, 2017)), and evaluating datasets on that. As usually the causal discovery is done by using synthetic datasets (Cheng, 2022), it should be a good estimate for an implementation.
+	
+	\subsubsection{Distribution change evaluation}
+	
+	The second way was done by incorporating the fact that we had two different distributions for two datasets, thus the algorithm was to train the model on the first, prior dataset, and try to minimize the drop of causal estimation (with a helper regression algorithm e.g. XGBoost (Chen \& Guestrin, 2016)). 
+	
+	\subsubsection{Likelihood of the graph by the inner metrics}
+	
+	The third way is the comparison of the inner statistical metrics of different algorithms, e.g. p-values of the DirectLinGam \cite{lingam}. By this way the algorithms themselves report the quality of the output.
+	
+	\subsubsection{Predicting the data with the causal graph}
+	
+	This approach is based on training the regression and just comparing the output by the usual regression metrics, namely MSE or MAPE.
+	
     \section{Approach} % Methodology, algorithms, and frameworks used.
 
     \subsection{Methodology}
@@ -127,7 +154,11 @@
     \subsubsection{Fast Causal Inference (FCI)}
     The FCI algorithm \cite{FCI} works under both latent variables and selection bias. We use its implementation in causal-learn \cite{Causallearn}.
 
-    %\subsubsection{VARMALINGRAM}
+	
+	\subsubsection{VAR-LINGRAM}
+	
+	Var-Lingram (Shimizu, 2006)	 is a time series extension for a Lingram model. The linearity of a data-generating process was an important contribution, due to the similarity with our structural constraints.    
+
 
     \subsubsection{Peter-Clark (PC)}
     PC \cite{PC} is a general purpose algorithms for causal discovery which works by first identifying the undirected causal graph, and then directing the edges. It is also implemented in causal-learn.
