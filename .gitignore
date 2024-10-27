@@ -1,4 +1,4 @@
-data/*.csv
+dataset/*.csv
 __pycache__/
 .ipynb_checkpoints
 
