@@ -32,7 +32,7 @@ def restrict_unimportant_connections(n: int, low_scrap, high_scrap, prior_knowle
     return prior_knowledge
 
 
-def fit_DirectLiNGAM(high_scrap, low_scrap, filter=True):
+def fit_DirectLiNGAM(high_scrap, low_scrap, filter=False):
     X = pd.concat([high_scrap, low_scrap])
     # normalizing
     X = (X - X.min()) / (X.max() - X.min())
@@ -41,12 +41,14 @@ def fit_DirectLiNGAM(high_scrap, low_scrap, filter=True):
 
     prior_knowledge = get_prior_knowledge(n, X)
 
+    # prior_knowledge = pd.read_csv("dataset/prior_knowledge.csv").values
+
     if filter:
         prior_knowledge = restrict_unimportant_connections(
             n, low_scrap, high_scrap, prior_knowledge
         )
 
     model = lingam.DirectLiNGAM(prior_knowledge=prior_knowledge)
-    model.fit(X)
+    model.fit(X.values)
 
-    return model
+    return model.adjacency_matrix_
